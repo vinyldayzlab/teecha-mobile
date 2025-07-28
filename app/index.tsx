@@ -1,9 +1,14 @@
-import { Text, View } from "react-native";
+import { useEffect } from "react";
+import { router, useNavigationContainerRef } from "expo-router";
 
 export default function Index() {
-  return (
-    <View className="flex-1 justify-center items-center">
-      <Text className="text-cyan-950">Hello World</Text>
-    </View>
-  );
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      router.replace("/splash");
+    }, 10);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return null;
 }
