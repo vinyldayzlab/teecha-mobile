@@ -5,16 +5,10 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "/*"
-      ],
-      "@assets/*": [
-        "/assets/*"
-      ]
+      "@/*": ["/*"],
+      "@assets/*": ["/assets/*"]
     },
-    "types": [
-      "nativewind/types"
-    ]
+    "types": ["nativewind/types"]
   },
   "include": [
     "**/*.ts",
