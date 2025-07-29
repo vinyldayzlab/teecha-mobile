@@ -21,6 +21,8 @@ export default function Onboarding() {
           params: { role: "teacher" },
         }}
       />
+      <Text className="text-lg font-barlow">This is Barlow Regular</Text>
+      <Text className="text-lg font-barlow-bold">This is Barlow Bold</Text>
     </View>
   );
 }
