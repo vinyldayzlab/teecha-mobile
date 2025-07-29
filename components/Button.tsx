@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 import { textVariants } from "constants/typography";
 
 const styles = {
-  container: "w-full py-5 rounded-lg items-center justify-center",
+  container: "w-full py-5 rounded-full items-center justify-center",
   primary: {
     button: "bg-primary",
     text: "text-neutral-100",
