@@ -1,6 +1,19 @@
 import React from "react";
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { useRouter } from "expo-router";
+import { textVariants } from "constants/typography";
+
+const styles = {
+  container: "w-full py-3 rounded-lg items-center justify-center",
+  primary: {
+    button: "bg-primary",
+    text: "text-neutral-100",
+  },
+  secondary: {
+    button: "bg-gray-200",
+    text: "text-neutral-900",
+  },
+};
 
 type ButtonProps = {
   title: string;
@@ -17,7 +30,6 @@ const Button: React.FC<ButtonProps> = ({
   onPress,
   type = "primary",
   route,
-  ...rest
 }) => {
   const router = useRouter();
 
@@ -29,23 +41,13 @@ const Button: React.FC<ButtonProps> = ({
     }
   };
 
-  const baseStyles = "w-full py-3 rounded-md items-center justify-center";
-
-  const typeStyles = {
-    primary: "bg-blue-600 text-white",
-    secondary: "bg-gray-200 text-gray-800",
-  };
-
   return (
     <TouchableOpacity
       onPress={handlePress}
-      className={`${baseStyles} ${type === "primary" ? "bg-blue-600" : "bg-gray-200"}`}
-      {...rest}
+      className={`${styles.container} ${type === "primary" ? styles.primary.button : styles.secondary.button}`}
     >
       <Text
-        className={`text-base font-medium ${
-          type === "primary" ? "text-white" : "text-gray-800"
-        }`}
+        className={`${textVariants.h5} ${type === "primary" ? styles.primary.text : styles.secondary.text}`}
       >
         {title}
       </Text>
