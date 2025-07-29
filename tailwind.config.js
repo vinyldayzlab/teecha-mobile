@@ -2,6 +2,20 @@
 module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
+  safelist: [
+    "text-h1",
+    "text-h2",
+    "text-h3",
+    "text-h4",
+    "text-h5",
+    "text-h6",
+    "text-body1",
+    "text-body2",
+    "text-subtitle1",
+    "text-subtitle2",
+    "text-caption",
+    "text-overline",
+  ],
   theme: {
     extend: {
       fontFamily: {
