@@ -1,7 +1,8 @@
 import { Stack } from "expo-router";
 import "./globals.css";
 import { useFonts } from "expo-font";
-import { Text, View } from "react-native";
+import { SafeAreaView, Text } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const RootLayout = () => {
   const [fontsLoaded] = useFonts({
@@ -15,14 +16,16 @@ const RootLayout = () => {
   }
 
   return (
-    <View className="flex-1 font-barlow">
-      <Stack>
-        <Stack.Screen name="splash" options={{ headerShown: false }} />
-        <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-        <Stack.Screen name="signup" options={{ headerShown: false }} />
-        <Stack.Screen name="login" options={{ headerShown: false }} />
-      </Stack>
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView className="flex-1">
+        <Stack>
+          <Stack.Screen name="splash" options={{ headerShown: false }} />
+          <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+          <Stack.Screen name="signup" options={{ headerShown: false }} />
+          <Stack.Screen name="login" options={{ headerShown: false }} />
+        </Stack>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 

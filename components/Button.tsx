@@ -4,14 +4,15 @@ import { useRouter } from "expo-router";
 import { textVariants } from "constants/typography";
 
 const styles = {
-  container: "w-full py-3 rounded-lg items-center justify-center",
+  container: "w-full py-5 rounded-lg items-center justify-center",
   primary: {
     button: "bg-primary",
     text: "text-neutral-100",
   },
   secondary: {
-    button: "bg-gray-200",
+    button: "bg-neutral-100",
     text: "text-neutral-900",
+    border: "border border-neutral-500",
   },
 };
 
@@ -44,10 +45,16 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <TouchableOpacity
       onPress={handlePress}
-      className={`${styles.container} ${type === "primary" ? styles.primary.button : styles.secondary.button}`}
+      className={`${styles.container} ${
+        type === "primary"
+          ? styles.primary.button
+          : `${styles.secondary.button} ${styles.secondary.border}`
+      }`}
     >
       <Text
-        className={`${textVariants.h5} ${type === "primary" ? styles.primary.text : styles.secondary.text}`}
+        className={`${textVariants.h5} ${
+          type === "primary" ? styles.primary.text : styles.secondary.text
+        }`}
       >
         {title}
       </Text>
