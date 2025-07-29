@@ -19,8 +19,8 @@ export default function Onboarding() {
             Welcome to Teecha!
           </Text>
           <Text className={`${textVariants.body1} text-center`}>
-            Manage your private classes as a teacher or find and access lessons
-            as a student.
+            Manage your private classes as a teacher or access lessons as a
+            student.
           </Text>
         </View>
         <View className="w-full flex flex-col gap-8">
