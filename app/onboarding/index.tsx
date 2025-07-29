@@ -1,12 +1,26 @@
-import { Link } from "expo-router";
+import Button from "components/Button";
 import { Text, View } from "react-native";
 
 export default function Onboarding() {
   return (
     <View className="flex-1 justify-center items-center">
       <Text className="text-primary text-5xl">Teecha</Text>
-      <Link href="/onboarding/account-verify">I'm a student</Link>
-      <Link href="/onboarding/account-verify">I'm a tutor</Link>
+      <Button
+        title="I'm a student"
+        type="primary"
+        route={{
+          link: "/onboarding/account-verify",
+          params: { role: "student" },
+        }}
+      />
+      <Button
+        title="I'm a teacher"
+        type="secondary"
+        route={{
+          link: "/onboarding/account-verify",
+          params: { role: "teacher" },
+        }}
+      />
     </View>
   );
 }
