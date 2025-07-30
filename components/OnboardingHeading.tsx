@@ -1,10 +1,10 @@
 import { useRouter } from "expo-router";
 import { TouchableOpacityProps, View } from "react-native";
-import IconButton from "./IconButton";
 import { textVariants } from "constants/typography";
 import { Text } from "react-native";
 import Stepper from "./Stepper";
 import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
+import IconButton from "./buttons/IconButton";
 
 type OnboardingHeadingProps = {
   title: string;
@@ -39,7 +39,6 @@ const OnboardingHeading: React.FC<OnboardingHeadingProps> = ({
           />
         )}
       </View>
-      {/* <Text className={`${textVariants.h1} text-neutral-`}>{title}</Text> */}
       <Text className={`${textVariants.h2} text-neutral-900`}>{title}</Text>
     </View>
   );
