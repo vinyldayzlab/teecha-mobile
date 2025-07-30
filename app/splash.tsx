@@ -10,7 +10,7 @@ export default function SplashScreen() {
 
     const timeout = setTimeout(async () => {
       router.replace("/onboarding");
-    }, 2000);
+    }, 1600);
 
     return () => clearTimeout(timeout);
 
