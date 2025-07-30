@@ -38,7 +38,7 @@ export default function Onboarding() {
               student.
             </Text>
           </View>
-          <View className="w-full flex flex-col gap-6">
+          <View className="w-full flex flex-col gap-5">
             <Button
               title="I'm a student"
               type="primary"
