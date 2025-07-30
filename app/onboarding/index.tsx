@@ -28,10 +28,12 @@ export default function Onboarding() {
             <Image source={logo} />
           </View>
           <View className="flex flex-col gap-3 items-center mb-8">
-            <Text className={`${textVariants.h1} text-center text-primary`}>
+            <Text className={`${textVariants.h1} text-center text-neutral-900`}>
               Welcome to Teecha!
             </Text>
-            <Text className={`${textVariants.body1} text-center`}>
+            <Text
+              className={`${textVariants.body1} text-center text-neutral-700`}
+            >
               Manage your private classes as a teacher or access lessons as a
               student.
             </Text>
