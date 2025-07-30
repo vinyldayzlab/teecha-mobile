@@ -1,6 +1,6 @@
 import { View } from "react-native";
-import Button, { ButtonProps } from "./Button";
-import { spacingVariants } from "constants/spacing";
+import Button, { ButtonProps } from "@components/buttons/Button";
+import { spacingVariants } from "@constants/spacing";
 
 type AtLeastTwo<T> = [T, T, ...T[]];
 

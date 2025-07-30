@@ -1,9 +1,9 @@
-import ButtonGroup from "components/buttons/ButtonGroup";
-import { textVariants } from "constants/typography";
+import ButtonGroup from "@components/buttons/ButtonGroup";
+import { textVariants } from "@constants/typography";
 import { Image, ScrollView, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import logo from "../../assets/images/favicon.png";
-import { spacingVariants } from "constants/spacing";
+import logo from "@assets/images/favicon.png";
+import { spacingVariants } from "@constants/spacing";
 
 export default function Onboarding() {
   return (
