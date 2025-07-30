@@ -21,7 +21,7 @@ export default function AccountVerify() {
       keyboardShouldPersistTaps="handled"
     >
       <View className="flex-1 flex-col gap-8 w-full items-center">
-        <OnboardingHeading title="Do you already have an account?" />
+        <OnboardingHeading title="Do you have an account?" />
         <ButtonGroup
           buttons={[
             {
