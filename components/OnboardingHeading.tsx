@@ -8,7 +8,10 @@ import IconButton from "./buttons/IconButton";
 
 type OnboardingHeadingProps = {
   title: string;
-  stepper?: boolean;
+  stepper?: {
+    step: number;
+    totalSteps: number;
+  };
   onPress?: () => void;
 } & TouchableOpacityProps;
 
@@ -27,7 +30,6 @@ const OnboardingHeading: React.FC<OnboardingHeadingProps> = ({
           type="secondary"
           onPress={onPress ?? (() => router.back())}
         />
-        {/* progress bar */}
         {stepper && (
           <Stepper
             steps={[

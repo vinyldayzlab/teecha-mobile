@@ -28,7 +28,8 @@ export default function AccountVerify() {
               title: "No, create an account",
               type: "primary",
               route: {
-                link: "/signup",
+                link:
+                  role === "teacher" ? "/signup/name" : "/signup/teacher-code",
                 params: { role: role },
               },
             },
