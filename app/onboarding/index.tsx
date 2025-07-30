@@ -3,6 +3,7 @@ import { textVariants } from "constants/typography";
 import { Image, ScrollView, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import logo from "../../assets/images/favicon.png";
+import { spacingVariants } from "constants/spacing";
 
 export default function Onboarding() {
   return (
@@ -18,7 +19,7 @@ export default function Onboarding() {
           flexGrow: 1,
           justifyContent: "center",
           alignItems: "center",
-          padding: 36,
+          padding: spacingVariants.viewPadding,
         }}
         keyboardShouldPersistTaps="handled"
       >
