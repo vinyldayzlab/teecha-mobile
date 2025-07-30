@@ -1,7 +1,7 @@
-import Button from "components/buttons/Button";
-import ButtonGroup from "components/buttons/ButtonGroup";
-import OnboardingHeading from "components/OnboardingHeading";
-import { spacingVariants } from "constants/spacing";
+import Button from "@components/buttons/Button";
+import ButtonGroup from "@components//buttons/ButtonGroup";
+import OnboardingHeading from "@components//OnboardingHeading";
+import { spacingVariants } from "@constants/spacing";
 import { LinearGradient } from "expo-linear-gradient";
 import { Link, useLocalSearchParams } from "expo-router";
 import { ScrollView, View } from "react-native";
