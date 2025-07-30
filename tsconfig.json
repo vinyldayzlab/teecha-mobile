@@ -6,9 +6,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
+      "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
       "@constants/*": ["./constants/*"],
-      "@assets/*": ["./assets/*"]
+      "@hooks/*": ["./hooks/*"]
     },
     "types": ["nativewind/types"]
   },
