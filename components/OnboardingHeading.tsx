@@ -20,7 +20,7 @@ const OnboardingHeading: React.FC<OnboardingHeadingProps> = ({
   const router = useRouter();
 
   return (
-    <View className="flex flex-col gap-4">
+    <View className="flex flex-col gap-4 w-full">
       <View className="flex flex-row gap-2">
         <IconButton
           icon={<ArrowLeftIcon />}
