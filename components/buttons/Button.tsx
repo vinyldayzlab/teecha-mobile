@@ -16,7 +16,7 @@ const styles = {
   },
 };
 
-type ButtonProps = {
+export type ButtonProps = {
   title: string;
   onPress?: () => void;
   type?: "primary" | "secondary";

@@ -1,4 +1,4 @@
-import Button from "components/Button";
+import ButtonGroup from "components/buttons/ButtonGroup";
 import { textVariants } from "constants/typography";
 import { Image, ScrollView, Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -38,24 +38,26 @@ export default function Onboarding() {
               student.
             </Text>
           </View>
-          <View className="w-full flex flex-col gap-5">
-            <Button
-              title="I'm a student"
-              type="primary"
-              route={{
-                link: "/onboarding/account-verify",
-                params: { role: "student" },
-              }}
-            />
-            <Button
-              title="I'm a teacher"
-              type="secondary"
-              route={{
-                link: "/onboarding/account-verify",
-                params: { role: "teacher" },
-              }}
-            />
-          </View>
+          <ButtonGroup
+            buttons={[
+              {
+                title: "I'm a student",
+                type: "primary",
+                route: {
+                  link: "/onboarding/account-verify",
+                  params: { role: "student" },
+                },
+              },
+              {
+                title: "I'm a teacher",
+                type: "secondary",
+                route: {
+                  link: "/onboarding/account-verify",
+                  params: { role: "teacher" },
+                },
+              },
+            ]}
+          />
         </View>
       </ScrollView>
     </LinearGradient>
