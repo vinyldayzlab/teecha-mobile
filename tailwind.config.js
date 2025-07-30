@@ -50,7 +50,9 @@ module.exports = {
         accent: "#203912",
         neutral: {
           100: "#FFFFFF", // white
+          300: "#F8FAFB", // background
           500: "#E5E5E5", // divider
+          700: "#4A5568", // grey - secondary text
           900: "#000000", // black
         },
       },
