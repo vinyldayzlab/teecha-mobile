@@ -49,7 +49,8 @@ module.exports = {
         ], // text-xs + font-semibold + uppercase + tracking-wide + leading-snug (with font-barlow)
       },
       colors: {
-        primary: "#0B2D21",
+        // primary: "#0B2D21",
+        primary: "#178F9F",
         secondary: "#15132",
         accent: "#203912",
         neutral: {
