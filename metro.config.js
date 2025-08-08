@@ -4,7 +4,16 @@ const path = require("path");
 
 const config = getDefaultConfig(__dirname);
 
-const extraNodeModules = {
+config.transformer = {
+  ...config.transformer,
+  babelTransformerPath: require.resolve("react-native-svg-transformer"),
+};
+config.resolver.assetExts = config.resolver.assetExts.filter(
+  (ext) => ext !== "svg",
+);
+config.resolver.sourceExts.push("svg");
+
+config.resolver.extraNodeModules = {
   ...config.resolver.extraNodeModules,
   "@": path.resolve(__dirname, "app"),
   "@assets": path.resolve(__dirname, "assets"),
@@ -12,8 +21,6 @@ const extraNodeModules = {
   "@constants": path.resolve(__dirname, "constants"),
   "@hooks": path.resolve(__dirname, "hooks"),
 };
-
-config.resolver.extraNodeModules = extraNodeModules;
 
 config.watchFolders = [
   path.resolve(__dirname, "app"),
