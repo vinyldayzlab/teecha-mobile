@@ -36,7 +36,6 @@ const Button: React.FC<ButtonProps> = ({
 
   const handlePress = () => {
     if (route) {
-      console.log({ pathname: route.link as any, params: route.params });
       router.push({ pathname: route.link as any, params: route.params });
     } else if (onPress) {
       onPress();

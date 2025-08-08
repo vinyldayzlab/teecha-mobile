@@ -3,6 +3,8 @@ import "@/globals.css";
 import { useFonts } from "expo-font";
 import { SafeAreaView, Text } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Auth0Provider } from "react-native-auth0";
+import Constants from "expo-constants";
 
 const RootLayout = () => {
   const [fontsLoaded] = useFonts({
@@ -15,17 +17,30 @@ const RootLayout = () => {
     return <Text>Loading fonts...</Text>;
   }
 
+  // const config = Constants?.expoConfig ?? Constants?.manifest2;
+  // const domain = config?.extra?.auth0Domain;
+  // const clientId = config?.extra?.auth0ClientId;
+
+  // if (!domain || !clientId) {
+  //   throw new Error(
+  //     "Missing Auth0 config values. Check app.config.js and .env.",
+  //   );
+  // }
+
   return (
-    <SafeAreaProvider>
-      <SafeAreaView className="flex-1">
-        <Stack>
-          <Stack.Screen name="splash" options={{ headerShown: false }} />
-          <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-          <Stack.Screen name="signup" options={{ headerShown: false }} />
-          <Stack.Screen name="login" options={{ headerShown: false }} />
-        </Stack>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    // <Auth0Provider domain={domain} clientId={clientId}>
+    // <Stack>
+    //   <Stack.Screen name="splash" options={{ headerShown: false }} />
+    //   <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+    //   <Stack.Screen name="signup" options={{ headerShown: false }} />
+    //   <Stack.Screen name="login" options={{ headerShown: false }} />
+    // </Stack>
+    // </Auth0Provider>
+    <Stack>
+      <Stack.Screen name="splash" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      {/*<Stack.Screen name="(app)" options={{ headerShown: false }} />*/}
+    </Stack>
   );
 };
 

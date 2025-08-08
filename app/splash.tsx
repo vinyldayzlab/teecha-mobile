@@ -9,7 +9,7 @@ export default function SplashScreen() {
     if (!navState?.key) return;
 
     const timeout = setTimeout(async () => {
-      router.replace("/onboarding");
+      router.replace("/(auth)");
     }, 1600);
 
     return () => clearTimeout(timeout);
