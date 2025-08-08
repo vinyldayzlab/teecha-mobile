@@ -32,7 +32,7 @@ export default function Onboarding() {
             <Icon width="100%" height="100%" />
           </View>
           <View className="flex flex-col gap-3 items-center my-8">
-            <Text className={`${textVariants.h1} text-center text-neutral-900`}>
+            <Text className={`${textVariants.h1} text-center text-neutral-800`}>
               Welcome!
             </Text>
             <Text
@@ -45,19 +45,19 @@ export default function Onboarding() {
           <ButtonGroup
             buttons={[
               {
-                title: "I'm a student",
+                title: "I'm a teacher",
                 type: "primary",
                 route: {
                   link: "(auth)/account-verify",
-                  params: { role: "student" },
+                  params: { role: "teacher" },
                 },
               },
               {
-                title: "I'm a teacher",
+                title: "I'm a student",
                 type: "secondary",
                 route: {
                   link: "(auth)/account-verify",
-                  params: { role: "teacher" },
+                  params: { role: "student" },
                 },
               },
             ]}
