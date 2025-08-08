@@ -31,11 +31,6 @@ export default function Onboarding() {
           <View className="absolute top-0 -translate-y-1/2 w-44 h-44 shadow-md">
             <Icon width="100%" height="100%" />
           </View>
-          {/*<Image
-            source={icon}
-            resizeMode="contain"
-            className="absolute top-0 -translate-y-1/2 w-40 h-40 aspect-square"
-          />*/}
           <View className="flex flex-col gap-3 items-center my-8">
             <Text className={`${textVariants.h1} text-center text-neutral-900`}>
               Welcome!
