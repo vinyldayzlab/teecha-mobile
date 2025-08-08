@@ -3,7 +3,6 @@ import { textVariants } from "@constants/typography";
 import { Image, ScrollView, Text, View } from "react-native";
 import { spacingVariants } from "@constants/spacing";
 import bgImage from "@assets/images/teecha-white-text.png";
-import icon from "@assets/images/teecha-icon.png";
 import Icon from "@assets/icons/teecha-icon.svg";
 
 export default function Onboarding() {
