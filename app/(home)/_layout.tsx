@@ -3,7 +3,7 @@ import CalendarIcon from "@components/icons/CalendarIcon";
 import SettingsIcon from "@components/icons/SettingsIcon";
 import StudentIcon from "@components/icons/StudentIcon";
 import { Tabs } from "expo-router";
-import { SafeAreaView, Settings } from "react-native";
+import { SafeAreaView } from "react-native";
 
 const HomeLayoutWrapper = () => {
   return (
