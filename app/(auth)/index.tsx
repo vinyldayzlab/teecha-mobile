@@ -62,7 +62,7 @@ export default function Onboarding() {
                       role: "teacher",
                     },
                   });
-                  router.replace("/(home)");
+                  router.replace("/(home)/agenda");
                 },
               },
               {
