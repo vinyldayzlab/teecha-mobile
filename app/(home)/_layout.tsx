@@ -7,7 +7,7 @@ import { SafeAreaView } from "react-native";
 
 const HomeLayoutWrapper = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#F8FAFB" }}>
       <Tabs
         initialRouteName="agenda"
         screenOptions={{

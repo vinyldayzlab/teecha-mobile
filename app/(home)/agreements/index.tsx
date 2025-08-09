@@ -1,10 +1,11 @@
-import { View, Text } from "react-native";
+import ContentView from "@components/layout/ContentView";
+import { Text } from "react-native";
 
 const Agreements = () => {
   return (
-    <View>
+    <ContentView>
       <Text>Agreements</Text>
-    </View>
+    </ContentView>
   );
 };
 
