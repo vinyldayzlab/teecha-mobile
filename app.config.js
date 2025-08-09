@@ -6,7 +6,7 @@ export default {
     slug: "teecha-mobile",
     version: "1.0.0",
     orientation: "portrait",
-    icon: "./assets/images/teecha-icon.png",
+    icon: "./assets/icons/teecha-icon.png",
     scheme: "teechamobile",
     userInterfaceStyle: "automatic",
     newArchEnabled: true,
@@ -22,7 +22,7 @@ export default {
     android: {
       package: process.env.ANDROID_PACKAGE,
       adaptiveIcon: {
-        foregroundImage: "./assets/images/teecha-icon.png",
+        foregroundImage: "./assets/icons/teecha-icon.png",
         backgroundColor: "#ffffff",
       },
       edgeToEdgeEnabled: true,
@@ -30,14 +30,14 @@ export default {
     web: {
       bundler: "metro",
       output: "static",
-      favicon: "./assets/images/teecha-icon.png",
+      favicon: "./assets/icons/teecha-icon.png",
     },
     plugins: [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          image: "./assets/images/teecha-icon.png",
+          image: "./assets/icons/teecha-icon.png",
           imageWidth: 200,
           resizeMode: "contain",
           backgroundColor: "#202020",
