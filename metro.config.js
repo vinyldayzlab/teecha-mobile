@@ -20,6 +20,7 @@ config.resolver.extraNodeModules = {
   "@components": path.resolve(__dirname, "components"),
   "@constants": path.resolve(__dirname, "constants"),
   "@hooks": path.resolve(__dirname, "hooks"),
+  "@lib": path.resolve(__dirname, "lib"),
 };
 
 config.watchFolders = [

@@ -1,11 +1,21 @@
-import ButtonGroup from "@components//buttons/ButtonGroup";
-import OnboardingHeading from "@components//OnboardingHeading";
+import ButtonGroup from "@components/buttons/ButtonGroup";
+import OnboardingHeading from "@components/OnboardingHeading";
 import { spacingVariants } from "@constants/spacing";
 import { useLocalSearchParams } from "expo-router";
+import { useEffect } from "react";
 import { ScrollView, View } from "react-native";
+import { useAuth0 } from "react-native-auth0";
 
-export default function AccountVerify() {
-  const { role } = useLocalSearchParams<{ role?: string }>();
+export default function StudentVerify() {
+  const { authorize } = useAuth0();
+
+  const onPressLogin = async () => {
+    try {
+      await authorize();
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <ScrollView
@@ -14,9 +24,10 @@ export default function AccountVerify() {
         justifyContent: "center",
         alignItems: "center",
         padding: spacingVariants.viewPadding,
-        backgroundColor: "#F8FAFB",
+        backgroundColor: "red",
       }}
       keyboardShouldPersistTaps="handled"
+      bounces={false}
     >
       <View className="flex-1 flex-col gap-8 w-full items-center">
         <OnboardingHeading title="Do you have an account?" />
@@ -26,18 +37,13 @@ export default function AccountVerify() {
               title: "No, create an account",
               type: "primary",
               route: {
-                link:
-                  role === "teacher" ? "/signup/name" : "/signup/teacher-code",
-                params: { role: role },
+                link: "/(auth)/teacher-code",
               },
             },
             {
               title: "Yes, login",
               type: "secondary",
-              route: {
-                link: "/login",
-                params: { role: role },
-              },
+              onPress: onPressLogin,
             },
           ]}
         />

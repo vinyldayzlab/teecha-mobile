@@ -4,11 +4,16 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { spacingVariants } from "@constants/spacing";
 import bgImage from "@assets/images/teecha-white-text.png";
 import Icon from "@assets/icons/teecha-icon.svg";
+import { useAuth0 } from "react-native-auth0";
+import { router } from "expo-router";
 
 export default function Onboarding() {
+  const { authorize } = useAuth0();
+
   return (
     <View>
       <ScrollView
+        style={{ flex: 1 }}
         contentContainerStyle={{
           flexGrow: 1,
           justifyContent: "space-between",
@@ -47,17 +52,16 @@ export default function Onboarding() {
               {
                 title: "I'm a teacher",
                 type: "primary",
-                route: {
-                  link: "(auth)/account-verify",
-                  params: { role: "teacher" },
+                onPress: async () => {
+                  await authorize();
+                  router.replace("/(home)");
                 },
               },
               {
                 title: "I'm a student",
                 type: "secondary",
                 route: {
-                  link: "(auth)/account-verify",
-                  params: { role: "student" },
+                  link: "(auth)/student-verify",
                 },
               },
             ]}

@@ -41,7 +41,7 @@ const OnboardingHeading: React.FC<OnboardingHeadingProps> = ({
           />
         )}
       </View>
-      <Text className={`${textVariants.h2} text-neutral-900`}>{title}</Text>
+      <Text className={`${textVariants.h2} text-neutral-100`}>{title}</Text>
     </View>
   );
 };
