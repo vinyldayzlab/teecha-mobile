@@ -1,10 +1,11 @@
-import { View, Text } from "react-native";
+import ContentView from "@components/layout/ContentView";
+import { Text } from "react-native";
 
 const Agenda = () => {
   return (
-    <View>
+    <ContentView>
       <Text>Agenda</Text>
-    </View>
+    </ContentView>
   );
 };
 
