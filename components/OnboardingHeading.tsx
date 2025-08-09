@@ -2,9 +2,9 @@ import { useRouter } from "expo-router";
 import { TouchableOpacityProps, View } from "react-native";
 import { textVariants } from "constants/typography";
 import { Text } from "react-native";
-import Stepper from "./Stepper";
-import ArrowLeftIcon from "../assets/icons/ArrowLeftIcon";
-import IconButton from "./buttons/IconButton";
+import Stepper from "@components/Stepper";
+import IconButton from "@components/buttons/IconButton";
+import ArrowLeftIcon from "@components/icons/ArrowLeftIcon";
 
 type OnboardingHeadingProps = {
   title: string;
