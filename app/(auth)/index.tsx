@@ -6,6 +6,7 @@ import bgImage from "@assets/images/teecha-white-text.png";
 import Icon from "@assets/icons/teecha-icon.svg";
 import { useAuth0 } from "react-native-auth0";
 import { router } from "expo-router";
+import Constants from "expo-constants";
 
 export default function Onboarding() {
   const { authorize } = useAuth0();
@@ -53,7 +54,14 @@ export default function Onboarding() {
                 title: "I'm a teacher",
                 type: "primary",
                 onPress: async () => {
-                  await authorize();
+                  await authorize({
+                    additionalParameters: {
+                      prompt: __DEV__
+                        ? Constants.expoConfig?.extra?.auth0Prompt
+                        : "consent",
+                      role: "teacher",
+                    },
+                  });
                   router.replace("/(home)");
                 },
               },

@@ -1,10 +1,13 @@
-import { Stack } from "expo-router";
+import { Slot, Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView } from "react-native";
 
 const AuthLayoutWrapper = () => {
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-    </Stack>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar style="dark" />
+      <Slot />
+    </SafeAreaView>
   );
 };
 

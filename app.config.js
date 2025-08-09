@@ -13,6 +13,7 @@ export default {
     extra: {
       auth0Domain: process.env.AUTH0_DOMAIN,
       auth0ClientId: process.env.AUTH0_CLIENTID,
+      auth0Prompt: process.env.AUTH0_PROMPT || "login",
     },
     ios: {
       bundleIdentifier: process.env.IOS_BUNDLE_IDENTIFIER,
