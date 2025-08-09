@@ -1,14 +1,7 @@
 import { Tabs } from "expo-router";
 import { SafeAreaView } from "react-native";
-import { usePathname } from "expo-router";
-import { use, useEffect } from "react";
 
 const HomeLayoutWrapper = () => {
-  const pathname = usePathname();
-  useEffect(() => {
-    console.log("Current route:", pathname);
-  }, []);
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Tabs
