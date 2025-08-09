@@ -29,7 +29,7 @@ const RootLayout = () => {
         if (hasCreds) {
           await credentialsManager.getCredentials();
           console.log("User logged in:", hasCreds);
-          router.replace("/(home)");
+          router.replace("/(home)/agenda");
         } else {
           router.replace("/(auth)");
         }
