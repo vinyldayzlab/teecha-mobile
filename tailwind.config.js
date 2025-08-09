@@ -50,7 +50,7 @@ module.exports = {
       },
       colors: {
         primary: "#144552",
-        secondary: "#15132",
+        secondary: "#178F9F",
         accent: "#203912",
         neutral: {
           100: "#FFFFFF", // white
