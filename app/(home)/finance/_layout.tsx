@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
 
-const StudentsLayout = () => {
+const FinanceLayout = () => {
   return <Stack screenOptions={{ headerShown: false }} />;
 };
 
-export default StudentsLayout;
+export default FinanceLayout;

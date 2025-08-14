@@ -1,7 +1,9 @@
-import AgreementIcon from "@components/icons/AgreementIcon";
-import CalendarIcon from "@components/icons/CalendarIcon";
-import SettingsIcon from "@components/icons/SettingsIcon";
-import StudentIcon from "@components/icons/StudentIcon";
+import {
+  CalendarIcon,
+  FinanceIcon,
+  SettingsIcon,
+  StudentIcon,
+} from "@components/icons";
 import { Tabs } from "expo-router";
 import { SafeAreaView } from "react-native";
 
@@ -47,7 +49,7 @@ const HomeLayoutWrapper = () => {
             headerShown: false,
             title: "Agreements",
             tabBarIcon: ({ focused }) => (
-              <AgreementIcon
+              <StudentIcon
                 variant={focused ? "solid" : "outline"}
                 className={focused ? "text-primary" : "text-neutral-700"}
                 width={20}
@@ -57,12 +59,12 @@ const HomeLayoutWrapper = () => {
           }}
         />
         <Tabs.Screen
-          name="students"
+          name="finance"
           options={{
             headerShown: false,
-            title: "Students",
+            title: "Finance",
             tabBarIcon: ({ focused }) => (
-              <StudentIcon
+              <FinanceIcon
                 variant={focused ? "solid" : "outline"}
                 className={focused ? "text-primary" : "text-neutral-700"}
                 width={20}

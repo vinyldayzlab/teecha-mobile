@@ -1,6 +1,6 @@
 import Svg, { Path, SvgProps } from "react-native-svg";
 
-const ArrowLeftIcon = (props: SvgProps) => (
+export const ArrowLeftIcon = (props: SvgProps) => (
   <Svg
     width={props.width ?? 24}
     height={props.height ?? 24}
@@ -14,5 +14,3 @@ const ArrowLeftIcon = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default ArrowLeftIcon;

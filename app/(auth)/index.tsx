@@ -1,7 +1,7 @@
 import ButtonGroup from "@components/buttons/ButtonGroup";
-import { textVariants } from "@constants/typography";
+import { textVariants } from "@lib/tailwind";
 import { Image, ScrollView, Text, View } from "react-native";
-import { spacingVariants } from "@constants/spacing";
+import { spacingVariants } from "@lib/tailwind";
 import bgImage from "@assets/icons/teecha-white-text.png";
 import Icon from "@assets/icons/teecha-icon.svg";
 import { useAuth0 } from "react-native-auth0";

@@ -4,7 +4,10 @@ type CalendarIconProps = SvgProps & {
   variant?: "outline" | "solid";
 };
 
-const CalendarIcon = ({ variant = "outline", ...props }: CalendarIconProps) => {
+export const CalendarIcon = ({
+  variant = "outline",
+  ...props
+}: CalendarIconProps) => {
   return (
     <Svg
       viewBox="0 0 24 24"
@@ -34,5 +37,3 @@ const CalendarIcon = ({ variant = "outline", ...props }: CalendarIconProps) => {
     </Svg>
   );
 };
-
-export default CalendarIcon;

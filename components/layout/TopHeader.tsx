@@ -1,6 +1,6 @@
 import { View, Image } from "react-native";
 import bgImage from "@assets/icons/teecha-black-text.png";
-import NotificationIcon from "@components/icons/NotificationIcon";
+import { NotificationIcon } from "@components/icons";
 
 const TopHeader = () => {
   return (
