@@ -4,7 +4,7 @@ type StudentIconProps = SvgProps & {
   variant?: "solid" | "outline";
 };
 
-const StudentIcon = ({
+export const StudentIcon = ({
   variant = "outline",
   width = 24,
   height = 24,
@@ -36,5 +36,3 @@ const StudentIcon = ({
     </Svg>
   );
 };
-
-export default StudentIcon;

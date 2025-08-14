@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { useRouter } from "expo-router";
-import { textVariants } from "constants/typography";
+import { textVariants } from "@lib/tailwind";
 
 const styles = {
   container: "w-full py-5 rounded-full items-center justify-center",

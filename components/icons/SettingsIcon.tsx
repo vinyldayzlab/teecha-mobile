@@ -4,7 +4,10 @@ type SettingsIconProps = SvgProps & {
   variant?: "solid" | "outline";
 };
 
-const SettingsIcon = ({ variant = "outline", ...props }: SettingsIconProps) => {
+export const SettingsIcon = ({
+  variant = "outline",
+  ...props
+}: SettingsIconProps) => {
   return (
     <Svg
       viewBox="0 0 24 24"
@@ -38,5 +41,3 @@ const SettingsIcon = ({ variant = "outline", ...props }: SettingsIconProps) => {
     </Svg>
   );
 };
-
-export default SettingsIcon;

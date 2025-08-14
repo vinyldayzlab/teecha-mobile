@@ -5,7 +5,7 @@ type NotificationIconProps = SvgProps & {
   hasNotification?: boolean;
 };
 
-const NotificationIcon = ({
+export const NotificationIcon = ({
   variant = "outline",
   hasNotification = false,
   ...props
@@ -53,5 +53,3 @@ const NotificationIcon = ({
     </Svg>
   );
 };
-
-export default NotificationIcon;

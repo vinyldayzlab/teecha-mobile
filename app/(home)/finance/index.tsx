@@ -1,12 +1,12 @@
 import ContentView from "@components/layout/ContentView";
 import { Text } from "react-native";
 
-const Students = () => {
+const Finance = () => {
   return (
     <ContentView>
-      <Text>Students</Text>
+      <Text>Finance</Text>
     </ContentView>
   );
 };
 
-export default Students;
+export default Finance;

@@ -1,10 +1,10 @@
 import { useRouter } from "expo-router";
 import { TouchableOpacityProps, View } from "react-native";
-import { textVariants } from "constants/typography";
+import { textVariants } from "@lib/tailwind";
 import { Text } from "react-native";
 import Stepper from "@components/Stepper";
 import IconButton from "@components/buttons/IconButton";
-import ArrowLeftIcon from "@components/icons/ArrowLeftIcon";
+import { ArrowLeftIcon } from "@components/icons";
 
 type OnboardingHeadingProps = {
   title: string;

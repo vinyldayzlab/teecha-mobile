@@ -1,3 +1,12 @@
+// constants related to tailwind configuration only
+
+import { spacing } from "@lib/theme";
+
+export const spacingVariants = {
+  viewPadding: spacing.viewPadding,
+  buttonGroup: "gap-5",
+};
+
 export const textVariants = {
   h1: "text-h1",
   h2: "text-h2",

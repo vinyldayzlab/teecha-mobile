@@ -1,6 +1,6 @@
 import ButtonGroup from "@components/buttons/ButtonGroup";
 import OnboardingHeading from "@components/OnboardingHeading";
-import { spacingVariants } from "@constants/spacing";
+import { spacing } from "@lib/theme";
 import { useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import { ScrollView, View } from "react-native";
@@ -23,7 +23,7 @@ export default function StudentVerify() {
         flexGrow: 1,
         justifyContent: "center",
         alignItems: "center",
-        padding: spacingVariants.viewPadding,
+        padding: spacing.viewPadding,
         backgroundColor: "red",
       }}
       keyboardShouldPersistTaps="handled"
