@@ -5,7 +5,7 @@ import { useRouter } from "expo-router";
 const styles = {
   container: "p-3 rounded-full items-center justify-center",
   primary: {
-    button: "bg-primary",
+    button: "bg-primary text-neutral-100",
   },
   secondary: {
     button: "bg-neutral-100 border border-neutral-500",
